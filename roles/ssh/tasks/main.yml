@@ -1,0 +1,14 @@
+---
+# tasks file for ./roles/ssh
+- name: Config ssh
+  ansible.builtin.shell: |
+    sed -i -e 's/.PermitRootLogin .*/PermitRootLogin no/' \
+    -e 's/.PermitEmptyPasswords .*/PermitEmptyPasswords no/' \ 
+    -e 's/.LogLevel .*/LogLevel VERBOSE/' \ 
+    -e 's/.X11Forwarding .*/X11Forwarding no/g' \ 
+    /etc/ssh/sshd_config
+
+- name: Restart service sshd
+  ansible.builtin.sysvinit:
+    name: ssh
+    state: restarted

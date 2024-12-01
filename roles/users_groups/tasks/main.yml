@@ -1,0 +1,22 @@
+---
+# tasks file for ./roles/users_groups
+- name: Add or delete users
+  ansible.builtin.user:
+    name: "{{ item.name_user }}"
+    shell: "/bin/{{ item.shell }}"
+    groups: "{{ item.groups }}"
+    password: "{{ item.pass | password_hash('sha512','A512') }}"
+    append: yes
+    create_home: yes
+    state: "{{ item.state }}"
+  with_items:
+    - '{{ users_list }}'
+
+- name: Set authorized key for users
+  ansible.posix.authorized_key:
+    user: "{{ item.name_user }}"
+    state: "{{ item.state }}"
+    key: "{{ item.public_key }}"
+  with_items:
+    - '{{ users_list }}'  
+  when: item.state == "present"

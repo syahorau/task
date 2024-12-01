@@ -1,0 +1,8 @@
+all:
+  vars:
+    ansible_user: test
+    ansible_password: test
+  hosts:
+    Docker_container:
+      ansible_port: 22222
+      ansible_host: localhost

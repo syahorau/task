@@ -1,0 +1,10 @@
+---
+# tasks file for ./roles/extra_apps_install
+- name: install extra apps
+  apt:
+    name: "{{ item }}"
+    update_cache: yes 
+    state: latest
+  with_items: "{{ extra_apps }}"
+
+  

@@ -1,0 +1,23 @@
+---
+# tasks file for ./roles/download_statics
+- name: Create folder
+  ansible.builtin.file:
+    path: /data/images
+    state: directory
+    mode: '0755'
+    owner: "www-data"
+    group: "www-data"
+    recurse: true
+
+- name: Download pictures
+  ansible.builtin.script: ../files/download_pictures.sh
+
+- name: Copy files 
+  ansible.builtin.copy:
+    src: ./files/images/
+    dest: /data/images/
+    owner: "www-data"
+    group: "www-data"
+    mode: '0644'
+    force: true
+

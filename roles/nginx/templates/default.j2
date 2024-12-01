@@ -1,0 +1,21 @@
+server {
+    listen 80;
+    server_name  localhost;
+    gzip on;
+    gzip_static on;
+    gzip_vary on;
+    expires 1h;
+    gzip_types image/jpeg;
+    access_log /var/log/nginx/access.log;
+    error_log /var/log/nginx/error.log;
+
+    location /images {
+        root /data;
+        autoindex on;
+    }
+    location / {
+        root /data;
+        index index.html;
+    }
+}
+    

@@ -1,0 +1,30 @@
+extra_apps:
+  - htop
+  - ncdu
+  - git
+  - nano
+  - zsh
+  - sudo
+  - curl
+
+users_list:
+  - name_user: "test1"
+    pass: "test1"
+    shell: "bash"
+    state: "present"
+    groups: "sudo"
+    public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCsokTrrMCNS4pA6Msqx19DWQzRxSXUmMDqTwhabwUjNOXbnW1Tj4nFWaZ4XatuCZ8o/7YYv5JnKbwEMM32Br2D8gHp7xqQCf4OdRzhD9mZYJ3JjOQozoB8FWT4RMtQupd2ywYJQbEzKRjlVgQUBeFgi0YTyPoaaPTBqSEsdkygRN7cUjG1l8qW26A2w9IQ9VIivcLVDxKjMUqgUDNQvR6JeZmhzSGrBDVo8O1S+tnKZ6GsDfkYqWWT35v0mhrRivw+Vi2Bo8AsAXaeg1UKBUilJXoWGjq+ZON9ycJQFY2s4TDzu/uI9yuSkF2RCZ4EfSSKCdxUjkQUgem6kPpdrdlk8g7tc3BR5EvVh4kl27+688snJeI5lpZUWkjPOTCCC6VfbVJ+br6HhqC9LWaL32zNHaNn09SsS6+mShmzZlCnP6ndf7YgfKuVFFQBD7LqoLa88ek3uJuqet0hgpB+l9uZgacc35gVPmTVfSRi8LiLd5XLgmxUuoHjgjtkQFsViFU="
+
+  - name_user: "test11"
+    pass: "test11"
+    shell: "zsh"
+    state: "present"
+    groups: "sudo"
+    public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCsokTrrMCNS4pA6Msqx19DWQzRxSXUmMDqTwhabwUjNOXbnW1Tj4nFWaZ4XatuCZ8o/7YYv5JnKbwEMM32Br2D8gHp7xqQCf4OdRzhD9mZYJ3JjOQozoB8FWT4RMtQupd2ywYJQbEzKRjlVgQUBeFgi0YTyPoaaPTBqSEsdkygRN7cUjG1l8qW26A2w9IQ9VIivcLVDxKjMUqgUDNQvR6JeZmhzSGrBDVo8O1S+tnKZ6GsDfkYqWWT35v0mhrRivw+Vi2Bo8AsAXaeg1UKBUilJXoWGjq+ZON9ycJQFY2s4TDzu/uI9yuSkF2RCZ4EfSSKCdxUjkQUgem6kPpdrdlk8g7tc3BR5EvVh4kl27+688snJeI5lpZUWkjPOTCCC6VfbVJ+br6HhqC9LWaL32zNHaNn09SsS6+mShmzZlCnP6ndf7YgfKuVFFQBD7LqoLa88ek3uJuqet0hgpB+l9uZgacc35gVPmTVfSRi8LiLd5XLgmxUuoHjgjtkQFsViFU="
+
+  - name_user: "test2"
+    pass: "test2"
+    shell: "zsh"
+    state: "absent"
+    groups: "sudo"
+    public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCsokTrrMCNS4pA6Msqx19DWQzRxSXUmMDqTwhabwUjNOXbnW1Tj4nFWaZ4XatuCZ8o/7YYv5JnKbwEMM32Br2D8gHp7xqQCf4OdRzhD9mZYJ3JjOQozoB8FWT4RMtQupd2ywYJQbEzKRjlVgQUBeFgi0YTyPoaaPTBqSEsdkygRN7cUjG1l8qW26A2w9IQ9VIivcLVDxKjMUqgUDNQvR6JeZmhzSGrBDVo8O1S+tnKZ6GsDfkYqWWT35v0mhrRivw+Vi2Bo8AsAXaeg1UKBUilJXoWGjq+ZON9ycJQFY2s4TDzu/uI9yuSkF2RCZ4EfSSKCdxUjkQUgem6kPpdrdlk8g7tc3BR5EvVh4kl27+688snJeI5lpZUWkjPOTCCC6VfbVJ+br6HhqC9LWaL32zNHaNn09SsS6+mShmzZlCnP6ndf7YgfKuVFFQBD7LqoLa88ek3uJuqet0hgpB+l9uZgacc35gVPmTVfSRi8LiLd5XLgmxUuoHjgjtkQFsViFU="

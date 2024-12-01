@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: web
+    ports:
+      - "22222:22"
+      - "80:80"
+    
+    environment:
+      POSTGRES_DB: deposit-service
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    networks:
+      - web
+
+networks:
+  web:
+    driver: bridge
