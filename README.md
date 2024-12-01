@@ -14,3 +14,5 @@
 
 8 - запус playbook в корне repo
 ansible-playbook -i ./inventory.yaml ansible-playbook.yaml
+
+9 - так же надо проинсталировать sshpass т.к. идет подключение по login and password.
